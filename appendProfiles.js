@@ -24,8 +24,12 @@ if (allReps[i].identification==queryString){
 
 //   </div>`
 
+
+  z = `<img src='assets/z.png' alt='part of RepreZent' class='z-sticker' style='transform: rotate(${z}deg);'>`
+
   if(pRep.age <= 35){
-    repreZent = `<img src="assets/reprezentsticker.png" alt="reprezent" class="profile-sticker" id="profile-reprezent">`
+    repreZent = Math.random() * 20-10
+    repreZent = `<img src="assets/reprezentsticker.png" alt="reprezent" class="profile-sticker" id="profile-reprezent" style="transform: rotate(${repreZent}deg);">`
   }
   
   if (pRep.contact.x !== "") {
@@ -65,11 +69,11 @@ if (allReps[i].identification==queryString){
   wrap.append(`
 
   <img src="assets/2024ward.png" id="rep-page-logo">
-  <a href="index.html">&#8592;All Reps</a>
+  <a href="endorsements.html">&#8592;All Reps</a>
   <section id="profile">
     <article id="profile-images">
-      <img src="assets/repPhotos/${pRep.photoSrc}" id="profile-headshot">
-      <img src="assets/endorsement.png" alt="Endorsed by Gen-Z for Change" class="profile-sticker" id="profile-gzendorsement">
+      <img src="${pRep.photoSrc}" id="profile-headshot">
+      <img src="assets/endorsement.png" alt="Endorsed by Gen-Z for Change" class="profile-sticker" id="profile-gzendorsement" >
       ${repreZent}
     </article>
     <section id="profile-about">

@@ -11,6 +11,7 @@ var socialBadges
 var statementBadgeArray
 var statementBadges = $(".statement-badges")
 var filteredReps
+var z=""
 
 
 //appending filters
@@ -34,14 +35,14 @@ function appendCounties(countyList) {
 //adding photo sources and identifications
 for (let i = 0; i < allReps.length; i++) {
   //☀️Photos HAVE to be the name + jpg!! (also this may change when we apply the API)
-  allReps[i].photoSrc = allReps[i].name.replace(/\s/g, '').toLowerCase() + ".jpg"
+  // allReps[i].photoSrc = allReps[i].name.replace(/\s/g, '').toLowerCase() + ".jpg"
 
   allReps[i].identification = allReps[i].name.replace(/\s/g, '').toLowerCase()
 }
 
 //creating cards
 function createCards(repArray) {
-
+  repContainer.empty()
   for (let i = 0; i < repArray.length; i++) {
 
     rep = repArray[i]
@@ -71,11 +72,22 @@ function createCards(repArray) {
     socialBadges = socialBadgeArray.toString().replace(/,/g, " ");
     console.log(rep)
 
+  if (rep.repreZent === "TRUE"){
+    z = Math.random() * 20-10
+    z = `<img src='assets/z.png' alt='part of RepreZent' class='z-sticker' style='transform: rotate(${z}deg);'>`
+  }
+  else{
+    z=""
+  }
+    
+
     repContainer.append(`
   <a href="representatives.html?${rep.identification}" class="card-redirect">
     <section class="rep-card">
-        <img src="assets/repPhotos/${rep.photoSrc}" alt="${rep.photoSrc}" id="${rep.photoSrc}">
+    ${z}
+        <img src="${rep.photoSrc} alt="${rep.name}" id="${rep.identification}">
         <h1>${rep.name}, ${rep.age}</h1>
+        
         <h2>${rep.county}, ${rep.state}</h2>
           
         <article class="contact-badges">
@@ -97,6 +109,7 @@ stateFilter.on("change", countyManipulation)
 
 
 function countyManipulation() {
+  
   stateValue = stateFilter.val()
   console.log(stateValue)
 
@@ -107,12 +120,12 @@ function countyManipulation() {
   
     if (countiesArray[i].state === stateValue) {
       filteredStates.push(countiesArray[i])
-      countyFilter.css("display", "none")
+      // countyFilter.css("display", "none")
     }
   }
 
   if (stateValue === "any") {
-    countyFilter.css("display", "none")
+    // countyFilter.css("display", "none")
     createCards(allReps)
 
   }

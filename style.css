@@ -236,6 +236,7 @@ hr {
   flex-wrap: wrap;
   min-height: 80vh;
   align-items: center;
+  margin: auto;
 }
 
 .rep-card {
@@ -246,7 +247,16 @@ hr {
   background: url("assets/paper.jpeg") lightgray 50% / cover no-repeat;
   border-radius: 15px;
   box-shadow: 0px 4px 11px -6px rgba(0, 0, 0, 0.35);
+  position: relative;
 
+}
+
+.z-sticker{
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  height: 75px !important;
+  width: auto !important;
 }
 
 .rep-card h1 {
@@ -254,7 +264,7 @@ hr {
   font-weight: 600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin: 5px;
   align-self: flex-start;
 }
 
@@ -273,12 +283,13 @@ hr {
   height: 300px;
   object-fit: cover;
   border-radius: 7px;
+  margin-bottom: 15px;
 }
 
 .contact-badges {
   display: flex;
   flex-direction: row;
-  align-self: flex-start;
+  /* align-self: flex-start; */
   flex-wrap: nowrap;
 
 }
