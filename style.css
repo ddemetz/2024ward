@@ -690,7 +690,7 @@ color: white;
     text-align: center;
   }
 
-  #about-reprezent img{
+  #about-reprezent:first-child{
     width: 80%;
   }
 
