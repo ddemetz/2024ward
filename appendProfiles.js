@@ -17,12 +17,6 @@ if (allReps[i].identification==queryString){
     socialBadgeArray.push(`<a href="${pRep.contact.website}"><img src="assets/socialIcons/website.png" alt="${pRep.name}'s Website'"></a>`)
   }
 
-// `<div class="hoverme">
-//     <a href="x.com/${pRep.contact.x}"><img src="assets/socialIcons/x.png" alt="X"></a>
-
-//       <p class="text">@${pRep.contact.x}</p>
-
-//   </div>`
 
 
   z = `<img src='assets/z.png' alt='part of RepreZent' class='z-sticker' style='transform: rotate(${z}deg);'>`
@@ -72,7 +66,7 @@ if (allReps[i].identification==queryString){
   <a href="endorsements.html">&#8592;All Reps</a>
   <section id="profile">
     <article id="profile-images">
-      <img src="${pRep.photoSrc}" id="profile-headshot">
+      <img src="assets/headshots/${pRep.photoSrc}" id="profile-headshot">
       <img src="assets/endorsement.png" alt="Endorsed by Gen-Z for Change" class="profile-sticker" id="profile-gzendorsement" >
       ${repreZent}
     </article>

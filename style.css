@@ -22,6 +22,10 @@ body {
   color: #043048;
 }
 
+footer{
+  height: 30px;
+}
+
 section {
   display: flex;
   align-items: center;

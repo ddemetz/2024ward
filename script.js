@@ -32,13 +32,6 @@ function appendCounties(countyList) {
   }
 }
 
-//adding photo sources and identifications
-for (let i = 0; i < allReps.length; i++) {
-  //☀️Photos HAVE to be the name + jpg!! (also this may change when we apply the API)
-  // allReps[i].photoSrc = allReps[i].name.replace(/\s/g, '').toLowerCase() + ".jpg"
-
-  allReps[i].identification = allReps[i].name.replace(/\s/g, '').toLowerCase()
-}
 
 //creating cards
 function createCards(repArray) {
@@ -85,7 +78,7 @@ function createCards(repArray) {
   <a href="representatives.html?${rep.identification}" class="card-redirect">
     <section class="rep-card">
     ${z}
-        <img src="${rep.photoSrc} alt="${rep.name}" id="${rep.identification}">
+        <img src="assets/headshots/${rep.photoSrc}" alt="${rep.name}" id="${rep.identification}">
         <h1>${rep.name}, ${rep.age}</h1>
         
         <h2>${rep.county}, ${rep.state}</h2>

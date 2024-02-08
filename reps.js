@@ -159,3 +159,14 @@ var allReps = [
     bio: "Ibraheem Samirah is a 33 year old first generation U.S. citizen, born to Jordanian-Palestinian immigrant parents. He is running for Congress to fight for a Green New Deal, Medicare for All, and a justice-oriented foreign policy that leaves nobody behind. Given what’s happening in Gaza right now, Ibraheem passionately believes that the US needs fighters who will stand up to the foreign policy establishment and deliver solutions that center the plight of the Palestinian people. Having previously served Loudoun County in the House of Delegates, Ibraheem would prioritize the climate crisis, education, and the movement for a permanent ceasefire in Gaza.",
   },
 ];
+
+
+//adding photo sources and identifications
+for (let i = 0; i < allReps.length; i++) {
+  //☀️Photos HAVE to be the name + jpg!!
+  allReps[i].identification = allReps[i].name.replace(/\s/g, '').toLowerCase()
+
+  allReps[i].photoSrc = allReps[i].identification + ".jpg"
+
+  console.log(allReps[i].photoSrc)
+}
