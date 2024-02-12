@@ -44,7 +44,7 @@ nav{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("assets/homepage.jpeg");
+  background-image: url("assets/homepage.png");
   background-size: cover;
   background-position: center;
   box-shadow: inset 1px 0 30px black;
@@ -53,14 +53,23 @@ nav{
 
 nav a{
    font-family: 'Josefin Sans', sans-serif;
-  color: white;
+  color: black;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  text-shadow: 1px 1px 10px black;
+  text-shadow: 1px 1px 10px white;
+  font-size: 30px;
+  text-decoration: none;
 }
 
 nav a:hover{
-  color: #60a3d2;
+  color: #005083;
+  transition: .2s;
+}
+
+nav a:active{
+  color: white;
+  transition: .05s;
 }
 
 #logo{
@@ -76,7 +85,7 @@ nav a:hover{
   text-align: center;
   min-height: 34vh;
   padding: 20px 10% 0;
-  min-width: 80%
+  min-width: 80%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -87,6 +96,7 @@ nav a:hover{
     font-size: 20px;
   }
 }
+
 
 #down-arrow{
   display: block;
@@ -137,6 +147,34 @@ nav a:hover{
     -webkit-animation-name: fadeOutDown;
     animation-name: fadeOutDown;
  }
+
+
+
+#sec {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+}
+@-webkit-keyframes border {
+     from {width: 0px;}
+     to {width:100%}
+}
+
+#sec:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: black;  
+  -webkit-animation-name: border; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-name: border;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
 
 @media screen and (max-width: 500px) {
 

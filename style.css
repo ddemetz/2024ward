@@ -12,6 +12,7 @@
 html {
   height: 100%;
   width: 100%;
+  scroll-padding-top: 4rem;
 }
 
 body {
@@ -140,16 +141,23 @@ header section h2 {
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 800px;
+  text-align: center;
+  align-items: flex-start
 }
 
 #about-stickers div{
   width: 25%;
 }
 
+#about-stickers div a{
+  color: #043048;
+}
+
 #about-stickers img {
   max-width: 100px;
-  width: 90%;
-  margin: 10px;
+  /* width: 90%; */
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 #about-stickers div {
@@ -231,6 +239,10 @@ hr {
   margin: 100px;
 }
 
+#less-margin-hr{
+  margin: 50px;
+}
+
 /* Cards */
 
 #rep-container {
@@ -246,13 +258,27 @@ hr {
 .rep-card {
   background-color: #f8f8f8;
   width: 300px;
+  min-height: 450px;
   margin: 20px;
   padding: 15px;
   background: url("assets/paper.jpeg") lightgray 50% / cover no-repeat;
   border-radius: 15px;
   box-shadow: 0px 4px 11px -6px rgba(0, 0, 0, 0.35);
   position: relative;
+  justify-content: space-between !important;
+}
 
+.seat{
+  color: #b90b19;
+  margin: 5px 1px;
+line-height: 15px;
+}
+
+.profile-seat{
+  color: #b90b19;
+    margin: 5px 1px;
+  line-height: 15px;
+  font-size: 20px;
 }
 
 .z-sticker{
@@ -299,10 +325,10 @@ hr {
 }
 
 .contact-badges a img {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   object-fit: cover;
-  margin: 15px 15px 0 0;
+  margin: 7px 7px;
 
 
 }
@@ -747,6 +773,40 @@ color: white;
   #about-stickers div{
     width: 32%;
   }
+
+  #about-reprezent img:first-child{
+    width: 100%;
+  }
+
+#profile{
+  flex-direction: column;
+}
+
+  #profile-name{
+    margin: initial 5px;
+  }
+
+  #profile-about{
+    max-width: initial;
+    margin: 30px 0px;
+  }
+
+  #back{
+    display: none;
+  }
+
+  .profile-seat{
+    padding: 0;
+  }
+
+#profile-about p{
+  margin: 0;
+  font-size: 18px;
+  padding: 0 0 20px 0;
+
+}
+
+  
   
 }
 .gen-z-sticker{

@@ -21,7 +21,7 @@ if (allReps[i].identification==queryString){
 
   z = `<img src='assets/z.png' alt='part of RepreZent' class='z-sticker' style='transform: rotate(${z}deg);'>`
 
-  if(pRep.age <= 35){
+  if(pRep.repreZent == "TRUE"){
     repreZent = Math.random() * 20-10
     repreZent = `<img src="assets/reprezentsticker.png" alt="reprezent" class="profile-sticker" id="profile-reprezent" style="transform: rotate(${repreZent}deg);">`
   }
@@ -63,7 +63,7 @@ if (allReps[i].identification==queryString){
   wrap.append(`
 
   <img src="assets/2024ward.png" id="rep-page-logo">
-  <a href="endorsements.html">&#8592;All Reps</a>
+  <a id = "back" href="endorsements.html">&#8592;All Reps</a>
   <section id="profile">
     <article id="profile-images">
       <img src="assets/headshots/${pRep.photoSrc}" id="profile-headshot">
@@ -76,6 +76,7 @@ if (allReps[i].identification==queryString){
         <img src="assets/pin.png" alt="pin" id="pin">
         <h6>${pRep.county}, ${pRep.state}</h6>
       </article>
+      <h2 class="profile-seat"><strong>Running for ${rep.seat}</strong></h2>
       <p>${pRep.bio}</p>
       <article id="profile-socials">
         ${socialBadges}

@@ -82,7 +82,7 @@ function createCards(repArray) {
         <h1>${rep.name}, ${rep.age}</h1>
         
         <h2>${rep.county}, ${rep.state}</h2>
-          
+        <h2 class="seat"><strong>${rep.seat}</strong></h2>
         <article class="contact-badges">
           ${socialBadges}
         </article>
