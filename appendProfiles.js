@@ -63,7 +63,7 @@ if (allReps[i].identification==queryString){
   wrap.append(`
 
   <img src="assets/2024ward.png" id="rep-page-logo">
-  <a id = "back" href="endorsements.html">&#8592;All Reps</a>
+  <a id = "back" href="/endorsements">&#8592;All Reps</a>
   <section id="profile">
     <article id="profile-images">
       <img src="assets/headshots/${pRep.photoSrc}" id="profile-headshot">
