@@ -712,6 +712,11 @@ color: white;
     line-height: 30px !important;
   }
 
+  .seat{
+    line-height: 20px !important;
+    margin-bottom: 15px;
+  }
+
   section{
   max-width: 100vw;
   }
