@@ -76,7 +76,7 @@ if (allReps[i].identification==queryString){
         <img src="assets/pin.png" alt="pin" id="pin">
         <h6>${pRep.county}, ${pRep.state}</h6>
       </article>
-      <h2 class="profile-seat"><strong>Running for ${rep.seat}</strong></h2>
+      <h2 class="profile-seat"><strong>Running for ${pRep.seat}</strong></h2>
       <p>${pRep.bio}</p>
       <article id="profile-socials">
         ${socialBadges}
